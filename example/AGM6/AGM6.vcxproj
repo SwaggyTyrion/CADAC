@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{DDB7B28D-19AD-4C35-9490-11E95F6AC8E4}</ProjectGuid>
+    <RootNamespace>AGM6</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="AGM6_aero_deck.asc" />
+    <None Include="documentation.asc" />
+    <None Include="input.asc" />
+    <None Include="input_11_1_1 Best guidance gain.asc" />
+    <None Include="input_12_1_1 Instrument errors.asc" />
+    <None Include="input_13_2_1 Attacking three targets.asc" />
+    <None Include="input_9_1_1 AGM6 Test Case.asc" />
+    <None Include="readme.asc" />
+    <None Include="weather_deck.asc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="actuator.cpp" />
+    <ClCompile Include="aerodynamics.cpp" />
+    <ClCompile Include="aircraft_functions.cpp" />
+    <ClCompile Include="aircraft_modules.cpp" />
+    <ClCompile Include="class_functions.cpp" />
+    <ClCompile Include="control.cpp" />
+    <ClCompile Include="datalink.cpp" />
+    <ClCompile Include="environment.cpp" />
+    <ClCompile Include="euler.cpp" />
+    <ClCompile Include="execution.cpp" />
+    <ClCompile Include="flat3_modules.cpp" />
+    <ClCompile Include="forces.cpp" />
+    <ClCompile Include="global_functions.cpp" />
+    <ClCompile Include="guidance.cpp" />
+    <ClCompile Include="ins.cpp" />
+    <ClCompile Include="intercept.cpp" />
+    <ClCompile Include="kinematics.cpp" />
+    <ClCompile Include="missile_functions.cpp" />
+    <ClCompile Include="newton.cpp" />
+    <ClCompile Include="propulsion.cpp" />
+    <ClCompile Include="sensor.cpp" />
+    <ClCompile Include="target_functions.cpp" />
+    <ClCompile Include="target_modules.cpp" />
+    <ClCompile Include="utility_functions.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
